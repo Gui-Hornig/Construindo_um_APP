@@ -23,7 +23,9 @@ body {
 
 body.logged-in {
     background: url(../images/background-chat-1.png)
-    
+}
+body.logged-in{
+    backdrop-filter: blur(2px);
 }
 
 .container{
