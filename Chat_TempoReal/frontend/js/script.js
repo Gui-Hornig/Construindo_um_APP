@@ -95,7 +95,7 @@ const handleLogin = (event) => {
     document.body.classList.add("logged-in")
     chat.style.display = "flex"
 
-    websocket = new WebSocket("ws://localhost:8080")
+    websocket = new WebSocket("wss://chat-online-f1n8.onrender.com")
     websocket.onmessage = processMessage
 
     console.log(user)
