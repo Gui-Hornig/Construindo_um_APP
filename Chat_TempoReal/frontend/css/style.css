@@ -112,7 +112,8 @@ body.logged-in{
     padding: 30px 30px 90px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    overflow-y: auto;
+    max-height: calc(100vh - 120px);
 }
 
 .chat__form {
@@ -192,4 +193,8 @@ display: block;
 margin-bottom: 15px;
 font-family: 700;
 color: cadetblue;
+}
+
+::-webkit-scrollbar{
+    display: none;
 }
