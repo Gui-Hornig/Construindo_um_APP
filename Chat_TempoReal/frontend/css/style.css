@@ -50,11 +50,40 @@ body.logged-in{
 
 .login > h2 {
     text-align: center;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.5rem;
     margin-bottom: 20px;
-    
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    animation: animate 6s alternate-reverse infinite;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+    border-right: 2px solid #f2f2f2;
+    box-sizing: border-box;
+    animation: animate 6s alternate-reverse infinite, blink-border 1s infinite;
 }
+
+
+@keyframes animate {
+    0%,10%,100%
+    {
+        width: 0px;
+    }
+    60%, 70%, 90%, 100%
+    {
+        width: 100%;
+    }
+}
+
+@keyframes blink-border {
+    0%, 30%, 100% {
+        border-right-color: transparent;
+    }
+    0%, 33%, 100% {
+        border-right-color: #f2f2f2;
+    }
+}
+
 .login__input::placeholder {
     color: #f2f2f2;
 }
@@ -84,7 +113,7 @@ body.logged-in{
 }
 
 .login__button {
-    border: 2px solid rgba(255,255,255, .1);;
+    border: 2px solid rgba(255,255,255, .1);
     padding: 15px;
     border-radius: 10px;
     font-size: 0.85rem;
